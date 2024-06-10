@@ -16,4 +16,9 @@ try {
 app.use(express.json());
 app.use(router);
 
-app.listen(3000, () => console.log("server 3000"));
+const PORT = process.env.PORT || 8001;
+app.listen(PORT, () => {
+  console.log("Server is up and listening on " + PORT);
+});
+
+// app.listen(8000, () => console.log("server 8000"));
